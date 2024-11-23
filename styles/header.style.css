@@ -1,0 +1,103 @@
+#main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: grid;
+
+  transition: top 0.2s linear;
+
+  &.scroll-down {
+    top: -32px;
+    > article:nth-child(2) {
+      max-width: 100%;
+    }
+  }
+
+  > article {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+
+    &:nth-child(1) {
+      height: 32px;
+      justify-content: space-between;
+      gap: 2rem;
+      padding-inline: 1rem;
+      font-size: smaller;
+      overflow: hidden;
+
+      > cite {
+        display: none;
+        text-wrap: nowrap;
+
+        @media screen and (min-width: 576px) {
+          display: inline-block;
+        }
+      }
+
+      > p {
+        text-wrap: nowrap;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+
+        > span {
+          display: inline-block;
+
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      display: flex;
+      align-items: center;
+
+      background-color: var(--color-light-primary);
+      color: var(--color-dark-primary);
+      transition: max-width 0.2s linear;
+
+      > .container {
+        width: 100%;
+        max-width: 1200px;
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.6rem 1rem;
+
+        > h1 {
+          > .large {
+            display: none;
+          }
+          > .short {
+            display: inline-block;
+          }
+          @media screen and (min-width: 576px) {
+            > .large {
+              display: inline-block;
+            }
+            > .short {
+              display: none;
+            }
+          }
+        }
+
+        > button {
+          background: inherit;
+          border: inherit;
+          border-radius: 2px;
+
+          padding: 0.4rem 1rem;
+          color: var(--color-light-secondary);
+          border: 2px solid var(--color-light-secondary);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
