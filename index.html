@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="styles/normalize.style.css" />
     <link rel="stylesheet" href="styles/global.style.css" />
     <link rel="stylesheet" href="styles/header.style.css" />
+    <link rel="stylesheet" href="styles/articles.style.css" />
+    <link rel="stylesheet" href="styles/footer.style.css" />
   </head>
-  <body style="min-height: 200vh">
+  <body>
     <!-- header: -->
     <header id="main-header">
       <article>
@@ -32,7 +34,23 @@
         </div>
       </article>
     </header>
-    <script src="sources/header.controller.js"></script>
+    <script src="scripts/header.script.js"></script>
     <!-- :header -->
+
+    <!-- articles: -->
+    <main id="articles">
+      <section id="article-container"></section>
+    </main>
+    <!-- :articles -->
+
+    <footer>
+      <section>
+        <p>Proyecto Integrador. Nuestro Periódico</p>
+        <cite>Página creada por Gustavo Rentería (net-rebel)</cite>
+      </section>
+    </footer>
+
+    <!-- articles -->
+    <script src="sources/main.js" type="module"></script>
   </body>
 </html>
